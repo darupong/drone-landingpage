@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "CSChatThaiUI";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/CSChatThaiUI-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CSChatThaiUI";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/CSChatThaiUI.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CSChatThaiUI";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/CSChatThaiUI-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CSChatThai";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/CSChatThai-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CSChatThai";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/CSChatThai.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CSChatThai";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/CSChatThai-Bold.woff2") format("woff2");
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "CSChatThaiUI", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Thai", sans-serif;
+  --font-display: "CSChatThai", "CSChatThaiUI", ui-sans-serif, system-ui, sans-serif;
+
+  /* Custom breakpoints — FullHD baseline (3xl) and 2K (4xl). */
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+
+  /* Light theme — elegant luxury-wedding palette (ivory · antique gold · blush) */
+  --color-background: hsl(40 38% 97%);
+  --color-foreground: hsl(24 20% 14%);
+
+  --color-muted: hsl(38 28% 94%);
+  --color-muted-foreground: hsl(28 10% 40%);
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(24 20% 14%);
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(24 20% 14%);
+
+  --color-border: hsl(36 24% 86%);
+  --color-input: hsl(36 24% 86%);
+  --color-ring: hsl(36 45% 46%);
+
+  --color-primary: hsl(35 44% 44%);
+  --color-primary-foreground: hsl(40 50% 98%);
+
+  --color-secondary: hsl(348 33% 52%);
+  --color-secondary-foreground: hsl(0 0% 100%);
+
+  --color-accent: hsl(38 36% 92%);
+  --color-accent-foreground: hsl(24 20% 14%);
+
+  --color-destructive: hsl(0 70% 50%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+
+  --radius: 0.75rem;
+}
+
+@layer base {
+  .dark {
+    /* Elegant night — warm charcoal · soft gold · blush */
+    --color-background: hsl(24 16% 8%);
+    --color-foreground: hsl(40 30% 94%);
+
+    --color-muted: hsl(24 12% 14%);
+    --color-muted-foreground: hsl(36 12% 68%);
+
+    --color-card: hsl(24 14% 11%);
+    --color-card-foreground: hsl(40 30% 94%);
+
+    --color-popover: hsl(24 14% 11%);
+    --color-popover-foreground: hsl(40 30% 94%);
+
+    --color-border: hsl(30 14% 22%);
+    --color-input: hsl(30 14% 22%);
+    --color-ring: hsl(40 55% 58%);
+
+    --color-primary: hsl(40 58% 58%);
+    --color-primary-foreground: hsl(24 30% 10%);
+
+    --color-secondary: hsl(348 40% 60%);
+    --color-secondary-foreground: hsl(0 0% 100%);
+
+    --color-accent: hsl(30 14% 16%);
+    --color-accent-foreground: hsl(40 30% 94%);
+
+    --color-destructive: hsl(0 60% 50%);
+    --color-destructive-foreground: hsl(0 0% 100%);
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Keep anchored sections clear of the sticky navbar when scrolled into view. */
+  :where(section[id]) {
+    scroll-margin-top: 5rem;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Prevent horizontal scroll on narrow viewports caused by absolutely-
+       positioned starfields / gradients leaking past the viewport edge. */
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: hsl(36 45% 50% / 0.28);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    z-index: 1000;
+    font-weight: 600;
+  }
+
+  .skip-link:focus {
+    left: 1rem;
+  }
+
+  /* Decorative dots — kept static (no animation) for a calm, all-ages background */
+  .ls-star {
+    animation: none;
+    opacity: 0.5;
+    transform-origin: center;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 1240px;
+  /* Horizontal padding ladder: 1rem mobile → 1.5rem sm → 2rem md → 3rem lg → 4rem 3xl → 6rem 4xl */
+  padding-inline: 1rem;
+
+  @media (min-width: 640px) {
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+  @media (min-width: 1024px) {
+    padding-inline: 3rem;
+  }
+  @media (min-width: 1920px) {
+    max-width: 1640px;
+    padding-inline: 4rem;
+  }
+  @media (min-width: 2560px) {
+    max-width: 2080px;
+    padding-inline: 6rem;
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility text-pretty {
+  text-wrap: pretty;
+}
+
+/* Fluid typography scales — FullHD baseline, gentle clamp() ramps. */
+@utility text-display {
+  font-size: clamp(2.25rem, 4.5vw, 5.5rem);
+  line-height: 1.05;
+}
+
+@utility text-section-title {
+  font-size: clamp(1.75rem, 3vw, 3.25rem);
+  line-height: 1.1;
+}
+
+@utility text-lead {
+  font-size: clamp(1rem, 1.25vw, 1.375rem);
+  line-height: 1.55;
+}
+
+/* Section-bleed gradients — soft 80–120px fades that tie consecutive sections together. */
+@utility section-bleed-top {
+  position: relative;
+}
+
+@utility section-bleed-bottom {
+  position: relative;
+}
+
+.section-bleed-top::before,
+.section-bleed-bottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 120px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-bleed-top::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--bleed-color, hsl(36 45% 50% / 0.06)), transparent);
+}
+
+.section-bleed-bottom::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--bleed-color, hsl(36 45% 50% / 0.06)), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-bleed-top::before,
+  .section-bleed-bottom::after {
+    opacity: 0.55;
+  }
+}

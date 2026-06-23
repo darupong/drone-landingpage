@@ -1,0 +1,329 @@
+{
+  "site": {
+    "name": "LuminaSky",
+    "tagline": "用世界级无人机表演,点亮夜空。",
+    "description": "LuminaSky 为泰国及亚洲市场打造世界级无人机灯光秀,服务婚礼、演唱会、节日庆典、品牌活动、开业仪式与跨年倒计时,全程持有泰国民航局正式许可。",
+    "ogImageAlt": "LuminaSky 无人机在夜空中拼出心形图案",
+    "skipToContent": "跳到正文"
+  },
+  "nav": {
+    "home": "首页",
+    "portfolio": "作品",
+    "process": "流程",
+    "pricing": "套餐",
+    "faq": "常见问题",
+    "contact": "联系",
+    "quote": "获取报价",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "themeToggle": "切换主题",
+    "language": "语言"
+  },
+  "hero": {
+    "eyebrow": "LuminaSky · 无人机灯光秀工作室",
+    "title": "用世界级无人机表演\n点亮你的夜空",
+    "subtitle": "我们将数百架无人机编排成夜空中的动态画作 —— 为婚礼、演唱会、品牌活动以及那些被铭记多年的瞬间而生。",
+    "ctaPrimary": "获取报价",
+    "ctaSecondary": "查看作品",
+    "trust": {
+      "rating": "亚洲范围 80+ 场演出",
+      "clients": "众多领先品牌的合作伙伴",
+      "safety": "持证飞行,100% 安全记录",
+      "experience": "团队具备 8+ 年制作经验"
+    },
+    "imageAlt": "数百架无人机在夜空中拼出心形图案的示意图"
+  },
+  "services": {
+    "title": "为每一种场合度身打造的无人机秀",
+    "subtitle": "从私密的花园婚礼,到几十万观众的城市跨年,我们根据场地、主题与故事,为你量身设计每一场表演。",
+    "items": {
+      "wedding": {
+        "title": "婚礼",
+        "description": "把名字与心形写进夜空,把仪式变成宾客多年后仍会津津乐道的记忆。"
+      },
+      "concert": {
+        "title": "演唱会与音乐节",
+        "description": "与音乐、激光与灯光精准同步,将艺人的演出升华为一场独一无二的视觉盛宴。"
+      },
+      "corporate": {
+        "title": "企业活动",
+        "description": "周年庆、年度大会、年终晚宴 —— 让品牌 Logo 在数百架无人机上飞向夜空。"
+      },
+      "activation": {
+        "title": "品牌活动",
+        "description": "为传播而设计 —— 每一个镜头都在策划之中,从现场到社交媒体都能持续发酵。"
+      },
+      "opening": {
+        "title": "新品发布与开业",
+        "description": "用 3D 空中动画为新酒店、新商场或新产品揭幕,瞬间抓住媒体与观众的注意。"
+      },
+      "countdown": {
+        "title": "跨年倒计时",
+        "description": "更环保、更可控的烟花替代方案,把城市与品牌的故事写在午夜的天空里。"
+      }
+    }
+  },
+  "process": {
+    "title": "我们如何执行一场表演",
+    "subtitle": "从你联系我们的第一天起,直到最后一架无人机降落,我们全程负责,你只需专注于宾客。",
+    "steps": {
+      "brief": {
+        "title": "1. 沟通与概念",
+        "description": "我们一起讨论主题、场地、观众与故事。创意团队会在 5 个工作日内提交初步概念方案。"
+      },
+      "design": {
+        "title": "2. 编舞与设计",
+        "description": "设计师制作分镜与 3D 预演,同步音乐、灯光与节奏。每一帧画面经你确认后,我们才进入飞行准备。"
+      },
+      "rehearsal": {
+        "title": "3. 场地勘察与彩排",
+        "description": "技术团队进行实地勘察,办理泰国民航局飞行许可,评估风向与障碍物,并在演出前一日完成全流程彩排。"
+      },
+      "show": {
+        "title": "4. 正式演出与回顾片",
+        "description": "演出当天,全套团队与备用无人机就位。演出结束 14 天内交付高分辨率回顾片,可用于公关与社交媒体。"
+      }
+    }
+  },
+  "showcase": {
+    "title": "我们近期最满意的一场演出",
+    "subtitle": "Siam Paragon 2025 跨年倒计时 —— 500 架无人机在曼谷市中心起飞,献给 8 万多名现场观众的一次新年献礼。",
+    "project": {
+      "name": "Siam Paragon Countdown 2025",
+      "client": "Siam Paragon",
+      "drones": "500 架",
+      "duration": "12 分钟",
+      "location": "曼谷 Parc Paragon",
+      "audience": "现场 80,000+",
+      "result": "当晚冲上 X 平台热门第一,视频片段一周内播放量突破 1,200 万。",
+      "imageAlt": "500 架无人机在曼谷天际线上方拼出数字 2025"
+    },
+    "captions": {
+      "wide": "Parc Paragon 现场广角",
+      "close": "无人机拼出品牌 Logo 的特写",
+      "audience": "跨年夜 8 万人的观众席",
+      "team": "LuminaSky 后台团队"
+    }
+  },
+  "stats": {
+    "title": "八年经验,凝聚于四个数字",
+    "items": {
+      "drones": {
+        "value": "500+",
+        "label": "可调度的无人机数量"
+      },
+      "shows": {
+        "value": "80+",
+        "label": "已交付的演出场次"
+      },
+      "audience": {
+        "value": "50K+",
+        "label": "年均现场观众人次"
+      },
+      "safety": {
+        "value": "100%",
+        "label": "安全飞行记录"
+      }
+    }
+  },
+  "portfolio": {
+    "previewTitle": "近期作品精选",
+    "previewSubtitle": "每一场表演都围绕客户的故事打造,没有两场演出是完全相同的。",
+    "viewAll": "查看完整作品",
+    "pageTitle": "LuminaSky 作品集",
+    "pageIntro": "精选近期演出 —— 涵盖婚礼、演唱会、企业活动、品牌活动与跨年,覆盖泰国及东南亚多个城市。",
+    "filters": {
+      "all": "全部",
+      "wedding": "婚礼",
+      "corporate": "企业",
+      "festival": "节庆",
+      "brand": "品牌"
+    },
+    "labels": {
+      "client": "客户",
+      "year": "年份",
+      "drones": "无人机数量",
+      "duration": "时长",
+      "location": "地点",
+      "services": "提供服务",
+      "result": "成果",
+      "viewProject": "查看项目详情",
+      "closeDialog": "关闭"
+    },
+    "seo": {
+      "title": "作品",
+      "description": "LuminaSky 在泰国及东南亚承接的无人机灯光秀作品集 —— 婚礼、演唱会、企业、品牌、跨年。"
+    }
+  },
+  "pricing": {
+    "title": "按你的活动量身定制套餐",
+    "subtitle": "起步价格,根据无人机数量、表演时长与编排复杂度灵活调整。详细方案请直接联系我们。",
+    "mostPopular": "最受欢迎",
+    "cta": "获取报价",
+    "perOne": "每场",
+    "currency": "฿",
+    "tiers": {
+      "essential": {
+        "name": "Essential",
+        "price": "฿350,000 起",
+        "summary": "花园婚礼、店面开业、中型品牌活动。",
+        "features": [
+          "100 架无人机",
+          "5–7 分钟表演",
+          "两组定制 Logo / 文字场景",
+          "现场团队 6 人",
+          "60 秒回顾片"
+        ]
+      },
+      "signature": {
+        "name": "Signature",
+        "price": "฿850,000 起",
+        "summary": "最受欢迎的方案 —— 高端婚礼与企业大型活动。",
+        "features": [
+          "300 架无人机",
+          "8–10 分钟表演",
+          "五段连续编舞",
+          "音乐与灯光同步",
+          "现场团队 10 人 + 备用机组",
+          "90 秒回顾片 + 幕后短片"
+        ]
+      },
+      "cinematic": {
+        "name": "Cinematic",
+        "price": "฿1,800,000 起",
+        "summary": "跨年、大型演唱会与冲击力极强的品牌战役。",
+        "features": [
+          "500+ 架无人机,可扩展",
+          "12 分钟以上表演",
+          "定制 3D 编舞",
+          "专属制片人全程跟进",
+          "现场团队 15+ 人,全套冗余系统",
+          "完整回顾片素材 + 社交媒体剪辑"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "仍有疑问?发送邮件至 hello@luminasky.show,我们会在一个工作日内回复。",
+    "items": [
+      {
+        "q": "需要提前多久预订?",
+        "a": "建议至少提前 45–60 天预订,以便我们设计编舞、申请民航局飞行许可并完成彩排。复杂主题建议提前 90 天以上。"
+      },
+      {
+        "q": "如果当天下雨或风太大,怎么办?",
+        "a": "每份合同都包含天气备案。如果不安全,我们可以推迟到当晚稍后时段,或按事先约定的备份日期演出,均不额外收费。"
+      },
+      {
+        "q": "需要哪些许可?",
+        "a": "由 LuminaSky 统一向泰国民航局(CAAT)申请飞行许可,并协调当地政府与场地方的所有许可。你只需签字,其余我们负责。"
+      },
+      {
+        "q": "可以在室内演出吗?",
+        "a": "可以。我们配备了专门的室内机型,飞行更安静、更安全,适合酒店宴会厅、会议中心与中型场馆。"
+      },
+      {
+        "q": "无人机数量最少是多少?",
+        "a": "为保证视觉效果,建议 100 架以上。规模更小的场合,我们也可以推荐其他灯光秀形式。"
+      },
+      {
+        "q": "对场地有什么要求?",
+        "a": "通常需要约 30×30 米的起降区,以及与建筑物和电线保持安全距离的开阔空域。规模会按机队大小调整,我们会先勘察后报价。"
+      },
+      {
+        "q": "影响价格的主要因素?",
+        "a": "六个因素:无人机数量、表演时长、编舞复杂度、场地条件、筹备时间,以及回顾片、社交媒体直播等增值服务。"
+      }
+    ]
+  },
+  "cta": {
+    "title": "准备好为你的活动点亮夜空了吗?",
+    "subtitle": "今天就把简短的活动 Brief 发给我们,我们会在一个工作日内回复你初步概念与预算估算,完全免费。",
+    "primary": "获取报价",
+    "secondary": "查看全部作品"
+  },
+  "footer": {
+    "tagline": "用世界级无人机表演,点亮夜空。",
+    "newsletter": {
+      "title": "把表演灵感送进你的邮箱",
+      "description": "每月一封 —— 幕后花絮、新概念,以及我们刚刚被允许公开的项目。",
+      "placeholder": "you@example.com",
+      "cta": "订阅",
+      "success": "感谢订阅。",
+      "emailLabel": "电子邮箱"
+    },
+    "columns": {
+      "explore": {
+        "title": "探索",
+        "links": {
+          "services": "服务",
+          "portfolio": "作品",
+          "process": "流程",
+          "pricing": "套餐"
+        }
+      },
+      "company": {
+        "title": "公司",
+        "links": {
+          "about": "关于 LuminaSky",
+          "press": "媒体",
+          "careers": "加入我们",
+          "contact": "联系方式"
+        }
+      },
+      "support": {
+        "title": "服务",
+        "links": {
+          "faq": "常见问题",
+          "safety": "安全",
+          "permits": "许可",
+          "terms": "服务条款"
+        }
+      }
+    },
+    "rights": "保留所有权利。",
+    "contact": {
+      "phone": "+66 2 000 0000",
+      "email": "hello@luminasky.show",
+      "address": "The Office Building 8 楼,曼谷瓦塔那区"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "tiktok": "TikTok",
+      "line": "LINE Official"
+    },
+    "legal": {
+      "privacy": "隐私",
+      "cookies": "Cookie",
+      "terms": "条款"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "LuminaSky · 无人机灯光秀工作室",
+      "description": "为泰国及亚洲市场打造的世界级无人机灯光秀 —— 婚礼、演唱会、企业活动、跨年、品牌活动。"
+    },
+    "portfolio": {
+      "title": "作品 · LuminaSky 无人机灯光秀",
+      "description": "LuminaSky 在泰国与东南亚交付的 80+ 场演出中精选呈现的作品集。"
+    }
+  },
+  "cookie": {
+    "message": "我们使用 Cookie 来提升您的体验并分析网站使用情况。",
+    "policyLink": "Cookie 政策",
+    "accept": "接受",
+    "decline": "拒绝",
+    "aria": "Cookie 同意"
+  },
+  "notFound": {
+    "title": "未找到页面",
+    "subtitle": "抱歉,您查找的页面不存在或已被移动。",
+    "home": "返回首页"
+  },
+  "content": {
+    "lastUpdated": "最后更新"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "LuminaSky — Drone Light Show Studio",
+  "short_name": "LuminaSky",
+  "description": "World-class drone light shows for weddings, concerts, festivals, brand activations, and countdowns.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d0a17",
+  "theme_color": "#0d0a17",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

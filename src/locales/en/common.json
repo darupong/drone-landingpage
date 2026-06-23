@@ -1,0 +1,329 @@
+{
+  "site": {
+    "name": "LuminaSky",
+    "tagline": "Paint the night sky with world-class drone shows.",
+    "description": "LuminaSky designs and operates world-class drone light shows in Thailand and across Asia — weddings, concerts, festivals, brand activations, grand openings, and countdown events. Fully licensed by CAAT.",
+    "ogImageAlt": "A LuminaSky drone light show painting a heart across the night sky",
+    "skipToContent": "Skip to content"
+  },
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "process": "Process",
+    "pricing": "Packages",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "quote": "Get a quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "themeToggle": "Toggle theme",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "LuminaSky · Drone Light Show Studio",
+    "title": "Paint the night sky\nwith world-class drone shows.",
+    "subtitle": "We choreograph hundreds of drones into living, moving artwork in the sky — for weddings, concerts, brand activations, and the moments your audience will tell stories about for years.",
+    "ctaPrimary": "Get a quote",
+    "ctaSecondary": "See our work",
+    "trust": {
+      "rating": "80+ shows across Asia",
+      "clients": "Trusted by leading brands",
+      "safety": "Fully licensed, 100% safety record",
+      "experience": "8+ years of crew experience"
+    },
+    "imageAlt": "Illustration of hundreds of drones forming a heart against a night sky"
+  },
+  "services": {
+    "title": "A drone show for every kind of moment",
+    "subtitle": "From an intimate garden wedding to a city-wide countdown with crowds of a hundred thousand, we tailor each show to your venue, theme, and story.",
+    "items": {
+      "wedding": {
+        "title": "Weddings",
+        "description": "Surprise your partner with a love letter written across the sky — initials, hearts, a moving story. The moment guests will be talking about for years."
+      },
+      "concert": {
+        "title": "Concerts & Festivals",
+        "description": "Synchronise drones with music, lasers, and stage lighting down to the frame. Elevate the artist's set into a one-of-a-kind spectacle."
+      },
+      "corporate": {
+        "title": "Corporate events",
+        "description": "Anniversaries, AGMs, annual parties — lift your brand logo into the sky on hundreds of drones and give your team a night to remember."
+      },
+      "activation": {
+        "title": "Brand activations",
+        "description": "Designed to go viral. Every show is choreographed to land beautifully on camera and travel across social media after the night ends."
+      },
+      "opening": {
+        "title": "Product launch & grand opening",
+        "description": "Open a hotel, a mall, a flagship store, or a product line with full 3D animation in the air — instantly capturing press and crowd attention."
+      },
+      "countdown": {
+        "title": "Countdown & NYE",
+        "description": "A clean, eco-friendly alternative to fireworks. Tell the story of your city — or your brand — at the stroke of midnight."
+      }
+    }
+  },
+  "process": {
+    "title": "How we run a show",
+    "subtitle": "From the day you reach out to the moment the last drone lands, we own every step so you can focus on your guests.",
+    "steps": {
+      "brief": {
+        "title": "1. Brief & concept",
+        "description": "We talk through your theme, venue, audience, and story. Our creative team comes back with a concept deck within 5 working days."
+      },
+      "design": {
+        "title": "2. Choreography & design",
+        "description": "Designers build a storyboard and a 3D preview synced to music, lighting, and pacing. You approve every frame before we go anywhere near the sky."
+      },
+      "rehearsal": {
+        "title": "3. Site survey & rehearsal",
+        "description": "Our technical crew walks the site, files CAAT permits, assesses wind and obstacles, then runs a full dress rehearsal the day before the show."
+      },
+      "show": {
+        "title": "4. Showtime & aftermovie",
+        "description": "On the night, full crew, full backup drones, full focus. We deliver your aftermovie in high resolution within 14 days, ready for press and social."
+      }
+    }
+  },
+  "showcase": {
+    "title": "A recent show we're proud of",
+    "subtitle": "Siam Paragon Countdown 2025 — a New Year's Eve over central Bangkok, choreographed with 500 drones for an audience of more than 80,000.",
+    "project": {
+      "name": "Siam Paragon Countdown 2025",
+      "client": "Siam Paragon",
+      "drones": "500 drones",
+      "duration": "12 minutes",
+      "location": "Parc Paragon, Bangkok",
+      "audience": "80,000+ live",
+      "result": "Trended #1 on X overnight; the clip crossed 12M views within a week.",
+      "imageAlt": "500 drones forming the number 2025 over the Bangkok skyline"
+    },
+    "captions": {
+      "wide": "Wide shot from Parc Paragon",
+      "close": "Close-up of drones forming the brand logo",
+      "audience": "Crowds of 80,000+ on New Year's Eve",
+      "team": "The LuminaSky crew behind the show"
+    }
+  },
+  "stats": {
+    "title": "Eight years of experience in four numbers",
+    "items": {
+      "drones": {
+        "value": "500+",
+        "label": "Drones in our fleet"
+      },
+      "shows": {
+        "value": "80+",
+        "label": "Productions delivered"
+      },
+      "audience": {
+        "value": "50K+",
+        "label": "Average annual audience"
+      },
+      "safety": {
+        "value": "100%",
+        "label": "Safety record"
+      }
+    }
+  },
+  "portfolio": {
+    "previewTitle": "A few of our recent shows",
+    "previewSubtitle": "Every show is designed around the client's story. No two shows are ever the same.",
+    "viewAll": "View the full portfolio",
+    "pageTitle": "The LuminaSky portfolio",
+    "pageIntro": "Selected drone shows we've designed and operated — across weddings, concerts, corporate events, and countdowns in Thailand and Southeast Asia.",
+    "filters": {
+      "all": "All",
+      "wedding": "Weddings",
+      "corporate": "Corporate",
+      "festival": "Festival",
+      "brand": "Brand"
+    },
+    "labels": {
+      "client": "Client",
+      "year": "Year",
+      "drones": "Drone count",
+      "duration": "Duration",
+      "location": "Location",
+      "services": "Services delivered",
+      "result": "Outcome",
+      "viewProject": "View project details",
+      "closeDialog": "Close"
+    },
+    "seo": {
+      "title": "Portfolio",
+      "description": "Selected drone light shows by LuminaSky — weddings, concerts, corporate events, brand activations, and countdowns across Thailand."
+    }
+  },
+  "pricing": {
+    "title": "Packages built around your event",
+    "subtitle": "Starting prices, adjusted up or down based on drone count, run-time, and complexity. Get in touch for a tailored quote.",
+    "mostPopular": "Most popular",
+    "cta": "Request a quote",
+    "perOne": "per show",
+    "currency": "฿",
+    "tiers": {
+      "essential": {
+        "name": "Essential",
+        "price": "from ฿350,000",
+        "summary": "Garden weddings, store openings, mid-size brand moments.",
+        "features": [
+          "100 drones",
+          "5–7 minute show",
+          "Two custom logo or text sequences",
+          "On-site crew of 6",
+          "60-second aftermovie"
+        ]
+      },
+      "signature": {
+        "name": "Signature",
+        "price": "from ฿850,000",
+        "summary": "Our most-booked package — premium weddings and corporate events.",
+        "features": [
+          "300 drones",
+          "8–10 minute show",
+          "Five continuous choreographed scenes",
+          "Music and lighting sync",
+          "On-site crew of 10 with backup drones",
+          "90-second aftermovie plus BTS reel"
+        ]
+      },
+      "cinematic": {
+        "name": "Cinematic",
+        "price": "from ฿1,800,000",
+        "summary": "Countdowns, large concerts, campaigns that aim for the headlines.",
+        "features": [
+          "500+ drones, scalable",
+          "12+ minute show",
+          "Bespoke 3D choreography",
+          "Dedicated producer through the project",
+          "On-site crew of 15+ with full redundancy",
+          "Full aftermovie suite with social cut-downs"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Still not sure? Send us a brief at hello@luminasky.show — we reply within one business day.",
+    "items": [
+      {
+        "q": "How far in advance should we book?",
+        "a": "We recommend 45–60 days minimum so we have time to design choreography, file CAAT permits, and run a full rehearsal. Complex concepts should be booked 90+ days ahead."
+      },
+      {
+        "q": "What happens if there's rain or strong wind?",
+        "a": "Every contract includes a weather contingency. If conditions are unsafe, we can delay the show within the same evening, or move it to a back-up date agreed up-front — at no extra cost."
+      },
+      {
+        "q": "What permits are required?",
+        "a": "LuminaSky handles all permits with the Civil Aviation Authority of Thailand (CAAT), along with local authority and venue clearances. You sign one document; we do the rest."
+      },
+      {
+        "q": "Can you fly indoors?",
+        "a": "Yes. We operate a special indoor fleet — quieter and safer — designed for hotel ballrooms, convention centers, and mid-size arenas."
+      },
+      {
+        "q": "What is the minimum drone count?",
+        "a": "For a show to read clearly, we recommend 100+ drones. For smaller moments we can suggest alternative light-show formats."
+      },
+      {
+        "q": "What kind of venue do we need?",
+        "a": "Roughly a 30×30 m take-off zone and clear airspace away from buildings and powerlines, sized to the fleet. We survey every venue before quoting."
+      },
+      {
+        "q": "What drives the price?",
+        "a": "Six things: drone count, show length, choreography complexity, venue, lead time, and extras like aftermovies or live social streaming."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to paint the sky for your event?",
+    "subtitle": "Send us a short brief today. We'll come back within one business day with an initial concept and an estimated budget — free of charge.",
+    "primary": "Get a quote",
+    "secondary": "View the portfolio"
+  },
+  "footer": {
+    "tagline": "Paint the night sky with world-class drone shows.",
+    "newsletter": {
+      "title": "Show ideas in your inbox",
+      "description": "One email a month — behind the scenes, new concepts, and shows we wish we could talk about sooner.",
+      "placeholder": "you@example.com",
+      "cta": "Subscribe",
+      "success": "Thanks for subscribing.",
+      "emailLabel": "Email address"
+    },
+    "columns": {
+      "explore": {
+        "title": "Explore",
+        "links": {
+          "services": "Services",
+          "portfolio": "Portfolio",
+          "process": "Process",
+          "pricing": "Packages"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About LuminaSky",
+          "press": "Press",
+          "careers": "Careers",
+          "contact": "Contact"
+        }
+      },
+      "support": {
+        "title": "Support",
+        "links": {
+          "faq": "FAQ",
+          "safety": "Safety",
+          "permits": "Permits",
+          "terms": "Terms"
+        }
+      }
+    },
+    "rights": "All rights reserved.",
+    "contact": {
+      "phone": "+66 2 000 0000",
+      "email": "hello@luminasky.show",
+      "address": "The Office Building, Floor 8, Watthana, Bangkok"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "tiktok": "TikTok",
+      "line": "LINE Official"
+    },
+    "legal": {
+      "privacy": "Privacy",
+      "cookies": "Cookies",
+      "terms": "Terms"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "LuminaSky · Drone Light Show Studio",
+      "description": "World-class drone light show production in Thailand. We design and operate drone shows for weddings, concerts, corporate events, countdowns, and brand activations."
+    },
+    "portfolio": {
+      "title": "Portfolio · LuminaSky drone shows",
+      "description": "Selected drone shows from 80+ productions across Thailand and Southeast Asia, by LuminaSky."
+    }
+  },
+  "cookie": {
+    "message": "We use cookies to enhance your experience and analyze site usage.",
+    "policyLink": "Cookie Policy",
+    "accept": "Accept",
+    "decline": "Decline",
+    "aria": "Cookie consent"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "Sorry, the page you are looking for does not exist or has been moved.",
+    "home": "Back to home"
+  },
+  "content": {
+    "lastUpdated": "Last updated"
+  }
+}
