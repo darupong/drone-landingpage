@@ -11,7 +11,9 @@ export const Separator = forwardRef<HTMLDivElement, SeparatorProps>(
     <div
       ref={ref}
       role={decorative ? 'none' : 'separator'}
-      aria-orientation={orientation}
+      // aria-orientation is only valid on role="separator"; it is disallowed on
+      // role="none" (decorative). Vertical separators still expose it.
+      aria-orientation={!decorative && orientation === 'vertical' ? 'vertical' : undefined}
       className={cn(
         'shrink-0 bg-[var(--color-border)]',
         orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px',

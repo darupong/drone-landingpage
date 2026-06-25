@@ -170,40 +170,30 @@ export default function Portfolio() {
               {openProject.description}
             </p>
             <dl className="mt-5 grid grid-cols-2 gap-4 text-sm">
-              <div className="flex items-start gap-2">
-                <Plane size={16} aria-hidden="true" className="mt-0.5 text-[var(--color-primary)]" />
-                <div>
-                  <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.drones')}</dt>
-                  <dd className="font-semibold">{openProject.drones}</dd>
-                </div>
+              <div className="grid grid-cols-[auto_1fr] items-start gap-x-2">
+                <Plane size={16} aria-hidden="true" className="row-span-2 mt-0.5 text-[var(--color-primary)]" />
+                <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.drones')}</dt>
+                <dd className="font-semibold">{openProject.drones}</dd>
               </div>
-              <div className="flex items-start gap-2">
-                <Clock size={16} aria-hidden="true" className="mt-0.5 text-[var(--color-primary)]" />
-                <div>
-                  <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.duration')}</dt>
-                  <dd className="font-semibold">{openProject.duration}</dd>
-                </div>
+              <div className="grid grid-cols-[auto_1fr] items-start gap-x-2">
+                <Clock size={16} aria-hidden="true" className="row-span-2 mt-0.5 text-[var(--color-primary)]" />
+                <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.duration')}</dt>
+                <dd className="font-semibold">{openProject.duration}</dd>
               </div>
-              <div className="flex items-start gap-2">
-                <MapPin size={16} aria-hidden="true" className="mt-0.5 text-[var(--color-primary)]" />
-                <div>
-                  <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.location')}</dt>
-                  <dd className="font-semibold">{openProject.location}</dd>
-                </div>
+              <div className="grid grid-cols-[auto_1fr] items-start gap-x-2">
+                <MapPin size={16} aria-hidden="true" className="row-span-2 mt-0.5 text-[var(--color-primary)]" />
+                <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.location')}</dt>
+                <dd className="font-semibold">{openProject.location}</dd>
               </div>
-              <div className="flex items-start gap-2">
-                <Calendar size={16} aria-hidden="true" className="mt-0.5 text-[var(--color-primary)]" />
-                <div>
-                  <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.year')}</dt>
-                  <dd className="font-semibold">{openProject.year}</dd>
-                </div>
+              <div className="grid grid-cols-[auto_1fr] items-start gap-x-2">
+                <Calendar size={16} aria-hidden="true" className="row-span-2 mt-0.5 text-[var(--color-primary)]" />
+                <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.year')}</dt>
+                <dd className="font-semibold">{openProject.year}</dd>
               </div>
-              <div className="flex items-start gap-2 col-span-2">
-                <Users size={16} aria-hidden="true" className="mt-0.5 text-[var(--color-primary)]" />
-                <div>
-                  <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.services')}</dt>
-                  <dd className="font-semibold">{openProject.services}</dd>
-                </div>
+              <div className="grid grid-cols-[auto_1fr] items-start gap-x-2 col-span-2">
+                <Users size={16} aria-hidden="true" className="row-span-2 mt-0.5 text-[var(--color-primary)]" />
+                <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.services')}</dt>
+                <dd className="font-semibold">{openProject.services}</dd>
               </div>
             </dl>
             <p className="mt-5 rounded-lg bg-[var(--color-muted)]/60 p-4 text-sm">

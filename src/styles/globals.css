@@ -76,7 +76,9 @@
   --color-ring: hsl(36 45% 46%);
 
   --color-primary: hsl(35 44% 44%);
-  --color-primary-foreground: hsl(40 50% 98%);
+  /* Dark espresso-brown text on the gold primary so buttons/badges meet WCAG AA
+     (~4.6:1 vs the near-white that only reached 3.8:1). */
+  --color-primary-foreground: hsl(28 40% 8%);
 
   --color-secondary: hsl(348 33% 52%);
   --color-secondary-foreground: hsl(0 0% 100%);

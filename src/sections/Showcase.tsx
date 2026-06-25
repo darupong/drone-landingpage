@@ -161,33 +161,25 @@ export function Showcase() {
                 </p>
               </div>
               <dl className="md:col-span-5 grid grid-cols-2 gap-4 text-sm">
-                <div className="flex items-start gap-2">
-                  <Plane size={16} aria-hidden="true" className="mt-0.5 text-[var(--color-primary)]" />
-                  <div>
-                    <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.drones')}</dt>
-                    <dd className="font-semibold">{t('showcase.project.drones')}</dd>
-                  </div>
+                <div className="grid grid-cols-[auto_1fr] items-start gap-x-2">
+                  <Plane size={16} aria-hidden="true" className="row-span-2 mt-0.5 text-[var(--color-primary)]" />
+                  <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.drones')}</dt>
+                  <dd className="font-semibold">{t('showcase.project.drones')}</dd>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Clock size={16} aria-hidden="true" className="mt-0.5 text-[var(--color-primary)]" />
-                  <div>
-                    <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.duration')}</dt>
-                    <dd className="font-semibold">{t('showcase.project.duration')}</dd>
-                  </div>
+                <div className="grid grid-cols-[auto_1fr] items-start gap-x-2">
+                  <Clock size={16} aria-hidden="true" className="row-span-2 mt-0.5 text-[var(--color-primary)]" />
+                  <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.duration')}</dt>
+                  <dd className="font-semibold">{t('showcase.project.duration')}</dd>
                 </div>
-                <div className="flex items-start gap-2">
-                  <MapPin size={16} aria-hidden="true" className="mt-0.5 text-[var(--color-primary)]" />
-                  <div>
-                    <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.location')}</dt>
-                    <dd className="font-semibold">{t('showcase.project.location')}</dd>
-                  </div>
+                <div className="grid grid-cols-[auto_1fr] items-start gap-x-2">
+                  <MapPin size={16} aria-hidden="true" className="row-span-2 mt-0.5 text-[var(--color-primary)]" />
+                  <dt className="text-[var(--color-muted-foreground)]">{t('portfolio.labels.location')}</dt>
+                  <dd className="font-semibold">{t('showcase.project.location')}</dd>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Users size={16} aria-hidden="true" className="mt-0.5 text-[var(--color-primary)]" />
-                  <div>
-                    <dt className="text-[var(--color-muted-foreground)]">Audience</dt>
-                    <dd className="font-semibold">{t('showcase.project.audience')}</dd>
-                  </div>
+                <div className="grid grid-cols-[auto_1fr] items-start gap-x-2">
+                  <Users size={16} aria-hidden="true" className="row-span-2 mt-0.5 text-[var(--color-primary)]" />
+                  <dt className="text-[var(--color-muted-foreground)]">Audience</dt>
+                  <dd className="font-semibold">{t('showcase.project.audience')}</dd>
                 </div>
               </dl>
             </div>
