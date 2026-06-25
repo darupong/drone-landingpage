@@ -2,21 +2,20 @@ import { useTranslation } from 'react-i18next'
 import { ChevronDown } from 'lucide-react'
 import { useAppStore, type Locale } from '@/store/useAppStore'
 import { SUPPORTED_LOCALES } from '@/i18n'
+import { LOCALE_META } from '@/i18n/locale-meta'
 import { DropdownMenu, DropdownItem } from '@/components/ui/dropdown'
 import { cn } from '@/lib/utils'
-
-const LABELS: Record<Locale, string> = { en: 'EN', th: 'TH', zh: 'ZH' }
-const NATIVE: Record<Locale, string> = { en: 'English', th: 'ไทย', zh: '中文' }
-const FLAGS: Record<Locale, string> = { en: '/icons/en.png', th: '/icons/th.png', zh: '/icons/zh.png' }
 
 function Flag({ locale, size = 18 }: { locale: Locale; size?: number }) {
   return (
     <img
-      src={FLAGS[locale]}
+      src={LOCALE_META[locale].flag}
       alt=""
       aria-hidden="true"
       width={size}
       height={size}
+      loading="lazy"
+      decoding="async"
       className="inline-block shrink-0 rounded-full object-cover"
       style={{ width: size, height: size }}
     />
@@ -48,7 +47,7 @@ export function LanguageSwitcher({ variant = 'compact', className }: LanguageSwi
         triggerContent={
           <>
             <Flag locale={currentLocale} size={18} />
-            <span className="tabular-nums">{LABELS[currentLocale]}</span>
+            <span className="tabular-nums">{LOCALE_META[currentLocale].label}</span>
             <ChevronDown size={14} aria-hidden="true" className="opacity-70" />
           </>
         }
@@ -64,7 +63,7 @@ export function LanguageSwitcher({ variant = 'compact', className }: LanguageSwi
               }}
             >
               <Flag locale={loc} size={18} />
-              {NATIVE[loc]}
+              {LOCALE_META[loc].native}
             </DropdownItem>
           ))
         }
@@ -89,7 +88,7 @@ export function LanguageSwitcher({ variant = 'compact', className }: LanguageSwi
             )}
           >
             <Flag locale={loc} size={18} />
-            {NATIVE[loc]}
+            {LOCALE_META[loc].native}
           </button>
         ))}
       </div>
@@ -112,7 +111,7 @@ export function LanguageSwitcher({ variant = 'compact', className }: LanguageSwi
           )}
         >
           <Flag locale={loc} size={16} />
-          {LABELS[loc]}
+          {LOCALE_META[loc].label}
         </button>
       ))}
     </div>

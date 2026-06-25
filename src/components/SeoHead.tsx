@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { useAppStore } from '@/store/useAppStore'
 import { PORTFOLIO } from '@/data/portfolio'
+import { LOCALE_META } from '@/i18n/locale-meta'
 
 const SITE_URL = 'https://luminasky.show'
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.svg`
@@ -93,6 +94,8 @@ export function SeoHead({
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical} />
+      {/* The navbar's current-language flag is above the fold — preload it. */}
+      <link rel="preload" as="image" href={LOCALE_META[locale].flag} />
 
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={t('site.name')} />
