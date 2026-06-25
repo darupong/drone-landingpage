@@ -5,7 +5,7 @@ import en from '@/locales/en/common.json'
 import th from '@/locales/th/common.json'
 import zh from '@/locales/zh/common.json'
 
-export const SUPPORTED_LOCALES = ['en', 'th', 'zh'] as const
+export const SUPPORTED_LOCALES = ['th', 'en', 'zh'] as const
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number]
 
 export function isSupportedLocale(value: string | undefined | null): value is SupportedLocale {

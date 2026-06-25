@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { ChevronDown, Globe } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { useAppStore, type Locale } from '@/store/useAppStore'
 import { SUPPORTED_LOCALES } from '@/i18n'
 import { DropdownMenu, DropdownItem } from '@/components/ui/dropdown'
@@ -7,6 +7,21 @@ import { cn } from '@/lib/utils'
 
 const LABELS: Record<Locale, string> = { en: 'EN', th: 'TH', zh: 'ZH' }
 const NATIVE: Record<Locale, string> = { en: 'English', th: 'ไทย', zh: '中文' }
+const FLAGS: Record<Locale, string> = { en: '/icons/en.png', th: '/icons/th.png', zh: '/icons/zh.png' }
+
+function Flag({ locale, size = 18 }: { locale: Locale; size?: number }) {
+  return (
+    <img
+      src={FLAGS[locale]}
+      alt=""
+      aria-hidden="true"
+      width={size}
+      height={size}
+      className="inline-block shrink-0 rounded-full object-cover"
+      style={{ width: size, height: size }}
+    />
+  )
+}
 
 interface LanguageSwitcherProps {
   variant?: 'compact' | 'full' | 'menu'
@@ -32,7 +47,7 @@ export function LanguageSwitcher({ variant = 'compact', className }: LanguageSwi
         )}
         triggerContent={
           <>
-            <Globe size={16} aria-hidden="true" />
+            <Flag locale={currentLocale} size={18} />
             <span className="tabular-nums">{LABELS[currentLocale]}</span>
             <ChevronDown size={14} aria-hidden="true" className="opacity-70" />
           </>
@@ -48,9 +63,7 @@ export function LanguageSwitcher({ variant = 'compact', className }: LanguageSwi
                 close()
               }}
             >
-              <span className="text-xs font-semibold uppercase tabular-nums text-[var(--color-muted-foreground)]">
-                {LABELS[loc]}
-              </span>
+              <Flag locale={loc} size={18} />
               {NATIVE[loc]}
             </DropdownItem>
           ))
@@ -69,12 +82,13 @@ export function LanguageSwitcher({ variant = 'compact', className }: LanguageSwi
             onClick={() => switchTo(loc)}
             aria-pressed={currentLocale === loc}
             className={cn(
-              'rounded-md border px-3 py-1.5 text-sm font-medium transition-colors',
+              'flex items-center gap-2 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors',
               currentLocale === loc
                 ? 'border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-foreground)]'
                 : 'border-[var(--color-border)] hover:bg-[var(--color-accent)]',
             )}
           >
+            <Flag locale={loc} size={18} />
             {NATIVE[loc]}
           </button>
         ))}
@@ -83,10 +97,7 @@ export function LanguageSwitcher({ variant = 'compact', className }: LanguageSwi
   }
 
   return (
-    <div className={cn('flex items-center', className)} role="group" aria-label={t('nav.language')}>
-      <span className="mr-1.5 text-[var(--color-muted-foreground)]" aria-hidden="true">
-        <Globe size={16} />
-      </span>
+    <div className={cn('flex items-center gap-1', className)} role="group" aria-label={t('nav.language')}>
       {SUPPORTED_LOCALES.map((loc) => (
         <button
           key={loc}
@@ -94,12 +105,13 @@ export function LanguageSwitcher({ variant = 'compact', className }: LanguageSwi
           onClick={() => switchTo(loc)}
           aria-pressed={currentLocale === loc}
           className={cn(
-            'px-2 py-1 text-xs font-semibold uppercase tracking-wide transition-colors',
+            'flex items-center gap-1.5 px-2 py-1 text-xs font-semibold uppercase tracking-wide transition-colors',
             currentLocale === loc
               ? 'text-[var(--color-foreground)]'
               : 'text-[var(--color-muted-foreground)] hover:text-[var(--color-foreground)]',
           )}
         >
+          <Flag locale={loc} size={16} />
           {LABELS[loc]}
         </button>
       ))}
