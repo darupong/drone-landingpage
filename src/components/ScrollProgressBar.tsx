@@ -1,4 +1,4 @@
-import { motion, useScroll, useSpring } from 'motion/react'
+import { m, useScroll, useSpring } from 'motion/react'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
 /**
@@ -13,7 +13,7 @@ export function ScrollProgressBar() {
   if (reduced) return null
 
   return (
-    <motion.div
+    <m.div
       aria-hidden="true"
       style={{ scaleX, transformOrigin: '0% 50%' }}
       className="fixed left-0 right-0 top-0 z-50 h-[2px] bg-[var(--color-primary)] pointer-events-none"

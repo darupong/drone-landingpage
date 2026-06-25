@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { Check } from 'lucide-react'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -53,7 +53,7 @@ export function Pricing() {
           </p>
         </Reveal>
 
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
@@ -63,7 +63,7 @@ export function Pricing() {
           {TIERS.map(({ key, popular }) => {
             const features = t(`pricing.tiers.${key}.features`, { returnObjects: true }) as string[]
             return (
-              <motion.div key={key} variants={childVariants} className="h-full">
+              <m.div key={key} variants={childVariants} className="h-full">
                 <Card
                   className={cn(
                     'relative h-full flex flex-col transition-all duration-300 hover:-translate-y-1',
@@ -113,10 +113,10 @@ export function Pricing() {
                     </a>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </m.div>
             )
           })}
-        </motion.div>
+        </m.div>
       </div>
       <SectionBleed bottom color="violet" />
     </section>

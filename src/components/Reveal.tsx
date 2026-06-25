@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react'
-import { motion, type Variants } from 'motion/react'
+import { m, type Variants } from 'motion/react'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
 interface RevealProps {
@@ -25,7 +25,7 @@ export function Reveal({ children, delay = 0, y = 24, className, as = 'div', onc
   const reduced = useReducedMotion()
   const variants = buildVariants(reduced ? 0 : y)
 
-  const MotionTag = motion[as] as typeof motion.div
+  const MotionTag = m[as] as typeof m.div
 
   if (reduced) {
     const Tag = as

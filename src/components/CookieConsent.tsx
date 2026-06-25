@@ -1,26 +1,23 @@
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion, AnimatePresence } from 'motion/react'
+import { m, AnimatePresence } from 'motion/react'
 import { Cookie } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { useAppStore } from '@/store/useAppStore'
+import { useIsHydrated } from '@/hooks/useIsHydrated'
 
 export function CookieConsent() {
   const consent = useAppStore((s) => s.cookieConsent)
   const setConsent = useAppStore((s) => s.setCookieConsent)
-  const [mounted, setMounted] = useState(false)
   const { t } = useTranslation()
 
-  // Only render after mount so the stored choice is read client-side and the
+  // Only render after hydration so the stored choice is read client-side and the
   // banner never appears in the prerendered HTML (avoids hydration mismatch).
-  useEffect(() => setMounted(true), [])
-
-  const show = mounted && consent === null
+  const show = useIsHydrated() && consent === null
 
   return (
     <AnimatePresence>
       {show ? (
-        <motion.div
+        <m.div
           role="dialog"
           aria-label={t('cookie.aria')}
           aria-live="polite"
@@ -59,7 +56,7 @@ export function CookieConsent() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       ) : null}
     </AnimatePresence>
   )

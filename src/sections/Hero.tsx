@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { Award, Users, ShieldCheck, Sparkles, ArrowRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
@@ -66,16 +66,16 @@ export function Hero({ portfolioHref }: HeroProps) {
 
       <div className="container-page py-24 sm:py-28 md:py-32">
         <div className="max-w-2xl 3xl:max-w-3xl text-white">
-          <motion.div {...fadeUp(0)}>
+          <m.div {...fadeUp(0)}>
             <Badge
               variant="outline"
               className="mb-5 border-white/35 bg-white/10 text-white backdrop-blur-sm"
             >
               {t('hero.eyebrow')}
             </Badge>
-          </motion.div>
+          </m.div>
 
-          <motion.h1
+          <m.h1
             {...fadeUp(0.08)}
             className="text-display font-semibold tracking-tight text-balance text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]"
           >
@@ -84,16 +84,16 @@ export function Hero({ portfolioHref }: HeroProps) {
                 {line}
               </span>
             ))}
-          </motion.h1>
+          </m.h1>
 
-          <motion.p
+          <m.p
             {...fadeUp(0.16)}
             className="mt-6 max-w-xl text-lead text-white/85 text-pretty"
           >
             {t('hero.subtitle')}
-          </motion.p>
+          </m.p>
 
-          <motion.div
+          <m.div
             {...fadeUp(0.24)}
             className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3"
           >
@@ -114,9 +114,9 @@ export function Hero({ portfolioHref }: HeroProps) {
             >
               {t('hero.ctaSecondary')}
             </a>
-          </motion.div>
+          </m.div>
 
-          <motion.ul
+          <m.ul
             {...fadeUp(0.32)}
             className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/85"
           >
@@ -126,7 +126,7 @@ export function Hero({ portfolioHref }: HeroProps) {
                 <span>{label}</span>
               </li>
             ))}
-          </motion.ul>
+          </m.ul>
         </div>
       </div>
     </section>

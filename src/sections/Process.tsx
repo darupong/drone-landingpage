@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { ClipboardList, PenTool, Map, PartyPopper } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { SectionBleed } from '@/components/SectionBleed'
@@ -52,7 +52,7 @@ export function Process() {
           </p>
         </Reveal>
 
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
@@ -66,7 +66,7 @@ export function Process() {
           {KEYS.map((key, i) => {
             const Icon = ICONS[key]
             return (
-              <motion.div key={key} variants={stepVariants} className="relative">
+              <m.div key={key} variants={stepVariants} className="relative">
                 <div className="relative inline-flex h-14 w-14 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-background)] text-[var(--color-primary)] shadow-sm">
                   <Icon size={22} aria-hidden="true" />
                   <span
@@ -82,10 +82,10 @@ export function Process() {
                 <p className="mt-2 text-sm text-[var(--color-muted-foreground)] leading-relaxed">
                   {t(`process.steps.${key}.description`)}
                 </p>
-              </motion.div>
+              </m.div>
             )
           })}
-        </motion.div>
+        </m.div>
       </div>
       <SectionBleed bottom color="muted" />
     </section>

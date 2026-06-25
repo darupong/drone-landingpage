@@ -1,5 +1,5 @@
 import { Moon, Sun } from 'lucide-react'
-import { motion, AnimatePresence } from 'motion/react'
+import { m, AnimatePresence } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { useAppStore } from '@/store/useAppStore'
 
@@ -11,7 +11,7 @@ export function ThemeToggle() {
   const Icon = isDark ? Sun : Moon
 
   return (
-    <motion.button
+    <m.button
       type="button"
       aria-label={t('nav.themeToggle')}
       aria-pressed={isDark}
@@ -21,7 +21,7 @@ export function ThemeToggle() {
       className="relative inline-flex h-9 w-9 items-center justify-center rounded-full text-[var(--color-foreground)] transition-colors hover:bg-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background"
     >
       <AnimatePresence mode="wait" initial={false}>
-        <motion.span
+        <m.span
           key={theme}
           initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
           animate={{ opacity: 1, rotate: 0, scale: 1 }}
@@ -30,8 +30,8 @@ export function ThemeToggle() {
           className="absolute inline-flex"
         >
           <Icon size={18} aria-hidden="true" />
-        </motion.span>
+        </m.span>
       </AnimatePresence>
-    </motion.button>
+    </m.button>
   )
 }

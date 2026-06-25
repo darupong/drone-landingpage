@@ -1,5 +1,5 @@
 import { useEffect, type ReactNode } from 'react'
-import { motion, AnimatePresence } from 'motion/react'
+import { m, AnimatePresence } from 'motion/react'
 import { cn } from '@/lib/utils'
 
 interface SheetProps {
@@ -29,7 +29,7 @@ export function Sheet({ open, onClose, side = 'right', className, children, aria
     <AnimatePresence>
       {open ? (
         <>
-          <motion.div
+          <m.div
             key="overlay"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -38,7 +38,7 @@ export function Sheet({ open, onClose, side = 'right', className, children, aria
             className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
             onClick={onClose}
           />
-          <motion.aside
+          <m.aside
             key="panel"
             role="dialog"
             aria-modal="true"
@@ -54,7 +54,7 @@ export function Sheet({ open, onClose, side = 'right', className, children, aria
             )}
           >
             {children}
-          </motion.aside>
+          </m.aside>
         </>
       ) : null}
     </AnimatePresence>

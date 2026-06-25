@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Reveal } from '@/components/Reveal'
@@ -65,7 +65,7 @@ export function Testimonials({ portfolioHref }: TestimonialsProps) {
           </Link>
         </Reveal>
 
-        <motion.ul
+        <m.ul
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
@@ -73,7 +73,7 @@ export function Testimonials({ portfolioHref }: TestimonialsProps) {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 3xl:gap-6 4xl:gap-7"
         >
           {preview.map((p, i) => (
-            <motion.li key={p.id} variants={childVariants}>
+            <m.li key={p.id} variants={childVariants}>
               <Link
                 to={`${portfolioHref}#${p.id}`}
                 className="group block rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[var(--color-primary)]/40"
@@ -94,9 +94,9 @@ export function Testimonials({ portfolioHref }: TestimonialsProps) {
                   </p>
                 </div>
               </Link>
-            </motion.li>
+            </m.li>
           ))}
-        </motion.ul>
+        </m.ul>
 
         <div className="mt-10 text-center">
           <Link

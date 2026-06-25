@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { Heart, Music, Building2, Megaphone, Sparkles, Hourglass } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Reveal } from '@/components/Reveal'
@@ -58,7 +58,7 @@ export function Features() {
           </p>
         </Reveal>
 
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
@@ -68,7 +68,7 @@ export function Features() {
           {KEYS.map((key) => {
             const Icon = ICONS[key]
             return (
-              <motion.div key={key} variants={childVariants}>
+              <m.div key={key} variants={childVariants}>
                 <Card className="h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[var(--color-primary)]/40">
                   <CardContent className="p-6 3xl:p-7">
                     <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--color-primary)]/10 text-[var(--color-primary)] mb-4">
@@ -82,10 +82,10 @@ export function Features() {
                     </p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </m.div>
             )
           })}
-        </motion.div>
+        </m.div>
       </div>
       <SectionBleed bottom color="violet" />
     </section>

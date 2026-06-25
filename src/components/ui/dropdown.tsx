@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ButtonHTMLAttributes, type ReactNode } from 'react'
-import { motion, AnimatePresence } from 'motion/react'
+import { m, AnimatePresence } from 'motion/react'
 import { Check } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -59,7 +59,7 @@ export function DropdownMenu({
 
       <AnimatePresence>
         {open ? (
-          <motion.div
+          <m.div
             role="menu"
             initial={{ opacity: 0, y: -6, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -72,7 +72,7 @@ export function DropdownMenu({
             )}
           >
             {children(() => setOpen(false))}
-          </motion.div>
+          </m.div>
         ) : null}
       </AnimatePresence>
     </div>

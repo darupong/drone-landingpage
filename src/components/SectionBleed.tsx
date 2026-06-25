@@ -4,9 +4,9 @@ import { cn } from '@/lib/utils'
 type BleedColor = 'primary' | 'secondary' | 'muted' | 'amber' | 'violet'
 
 interface SectionBleedProps {
-  /** Render the bleed at the top of the parent section. */
+  /** Render the bleed at the top of the parent section (defaults to the bottom). */
   top?: boolean
-  /** Render the bleed at the bottom of the parent section. */
+  /** Render the bleed at the bottom of the parent section (the default). */
   bottom?: boolean
   color?: BleedColor
   className?: string
@@ -24,7 +24,9 @@ const COLORS: Record<BleedColor, string> = {
  * Soft 100px gradient bleed that softens the seam between adjacent sections.
  * Render inside a `relative` section. Set `top` or `bottom`.
  */
-export function SectionBleed({ top, bottom: _bottom, color = 'primary', className }: SectionBleedProps) {
+// `bottom` is the implicit default (rendered when `top` is falsy), so it is
+// accepted for call-site clarity but not read here.
+export function SectionBleed({ top, color = 'primary', className }: SectionBleedProps) {
   const stop = COLORS[color]
   const style: CSSProperties = top
     ? { background: `linear-gradient(to bottom, ${stop}, transparent)`, top: 0 }

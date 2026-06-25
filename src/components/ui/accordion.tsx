@@ -1,5 +1,5 @@
 import { createContext, useContext, useId, useState, type ReactNode } from 'react'
-import { motion, AnimatePresence } from 'motion/react'
+import { m, AnimatePresence } from 'motion/react'
 import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -49,19 +49,19 @@ export function AccordionItem({ value, question, children }: AccordionItemProps)
           className="flex w-full items-center justify-between gap-4 py-5 text-left text-base md:text-lg font-medium transition-colors hover:text-[var(--color-primary)]"
         >
           <span>{question}</span>
-          <motion.span
+          <m.span
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
             className="text-[var(--color-muted-foreground)]"
             aria-hidden="true"
           >
             <ChevronDown size={20} />
-          </motion.span>
+          </m.span>
         </button>
       </h3>
       <AnimatePresence initial={false}>
         {isOpen ? (
-          <motion.div
+          <m.div
             key="content"
             id={`${id}-panel`}
             role="region"
@@ -72,7 +72,7 @@ export function AccordionItem({ value, question, children }: AccordionItemProps)
             className="overflow-hidden text-[var(--color-muted-foreground)]"
           >
             <div className="pb-5 pr-8 leading-relaxed">{children}</div>
-          </motion.div>
+          </m.div>
         ) : null}
       </AnimatePresence>
     </div>

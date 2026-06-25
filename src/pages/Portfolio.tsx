@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { MapPin, Clock, Plane, Users, Calendar } from 'lucide-react'
 import { Navbar } from '@/sections/Navbar'
 import { Cta } from '@/sections/Cta'
@@ -30,12 +30,16 @@ export default function Portfolio() {
   const [openId, setOpenId] = useState<string | null>(null)
 
   // Open the matching project dialog when the URL hash matches a project id.
+  // This synchronises dialog state to an external system (the router) and must
+  // run post-hydration to deep-link correctly, so the setState-in-effect is
+  // intentional here rather than a derived-state smell.
   useEffect(() => {
     if (typeof window === 'undefined') return
     const hash = location.hash.replace(/^#/, '')
     if (!hash) return
     const exists = PORTFOLIO.some((p) => p.id === hash)
     if (exists) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing to the URL hash
       setOpenId(hash)
       // Try to scroll to the card so the dialog opens near its origin.
       const el = document.getElementById(`portfolio-card-${hash}`)
@@ -107,7 +111,7 @@ export default function Portfolio() {
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 4xl:grid-cols-5 gap-5 3xl:gap-6 4xl:gap-7 auto-rows-[16rem] md:auto-rows-[18rem] 3xl:auto-rows-[20rem]">
               {filtered.map((p, i) => (
-                <motion.li
+                <m.li
                   key={p.id}
                   id={`portfolio-card-${p.id}`}
                   initial={{ opacity: 0, y: 16 }}
@@ -135,7 +139,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                   </button>
-                </motion.li>
+                </m.li>
               ))}
             </ul>
           </div>

@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
+import { m, AnimatePresence } from 'motion/react'
 import { Link } from 'react-router-dom'
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
 import { ArrowRight, Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
@@ -8,22 +7,14 @@ import { Sheet } from '@/components/ui/sheet'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { useAppStore } from '@/store/useAppStore'
+import { useScrolledPast } from '@/hooks/useScrolledPast'
 import { cn } from '@/lib/utils'
 
 export function Navbar() {
   const { t } = useTranslation()
   const open = useAppStore((s) => s.mobileMenuOpen)
   const setOpen = useAppStore((s) => s.setMobileMenuOpen)
-  const [scrolled, setScrolled] = useState(false)
-  const { scrollY } = useScroll()
-
-  useMotionValueEvent(scrollY, 'change', (v) => {
-    setScrolled(v > 16)
-  })
-
-  useEffect(() => {
-    setScrolled(window.scrollY > 16)
-  }, [])
+  const scrolled = useScrolledPast(16)
 
   const quoteHref = '/#cta'
 
@@ -39,7 +30,7 @@ export function Navbar() {
   ]
 
   return (
-    <motion.header
+    <m.header
       initial={{ y: -32, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -53,7 +44,7 @@ export function Navbar() {
             : 'bg-transparent border-transparent shadow-none',
         )}
       >
-        <motion.div
+        <m.div
           animate={{ height: scrolled ? 56 : 72 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="container-page flex items-center justify-between gap-4"
@@ -62,7 +53,7 @@ export function Navbar() {
             to="/"
             className="group flex items-center gap-2 font-semibold tracking-tight text-lg"
           >
-            <motion.span
+            <m.span
               aria-hidden="true"
               whileHover={{ rotate: 12, scale: 1.08 }}
               transition={{ type: 'spring', stiffness: 400, damping: 14 }}
@@ -110,7 +101,7 @@ export function Navbar() {
               onClick={() => setOpen(!open)}
             >
               <AnimatePresence mode="wait" initial={false}>
-                <motion.span
+                <m.span
                   key={open ? 'close' : 'open'}
                   initial={{ opacity: 0, rotate: -90 }}
                   animate={{ opacity: 1, rotate: 0 }}
@@ -119,11 +110,11 @@ export function Navbar() {
                   className="inline-flex"
                 >
                   {open ? <X size={20} /> : <Menu size={20} />}
-                </motion.span>
+                </m.span>
               </AnimatePresence>
             </Button>
           </div>
-        </motion.div>
+        </m.div>
       </div>
 
       <Sheet open={open} onClose={() => setOpen(false)} ariaLabel={t('nav.openMenu')}>
@@ -137,14 +128,14 @@ export function Navbar() {
           <nav className="mt-8 flex flex-col gap-1" aria-label="Mobile">
             {links.map((l, i) => {
               const inner = (
-                <motion.span
+                <m.span
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: 0.05 + i * 0.04, ease: [0.22, 1, 0.36, 1] }}
                   className="block"
                 >
                   {l.label}
-                </motion.span>
+                </m.span>
               )
               return (
                 <Link
@@ -170,6 +161,6 @@ export function Navbar() {
           </div>
         </div>
       </Sheet>
-    </motion.header>
+    </m.header>
   )
 }

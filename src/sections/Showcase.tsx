@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion, useScroll, useTransform } from 'motion/react'
+import { m, useScroll, useTransform } from 'motion/react'
 import { MapPin, Users, Clock, Plane } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { Starfield } from '@/components/Starfield'
@@ -102,7 +102,7 @@ export function Showcase() {
         </Reveal>
 
         <div className="grid lg:grid-cols-12 gap-6 items-stretch">
-          <motion.figure
+          <m.figure
             style={{ y: yBack }}
             className="lg:col-span-8 group relative overflow-hidden rounded-2xl border border-[var(--color-border)] aspect-[4/3]"
           >
@@ -120,10 +120,10 @@ export function Showcase() {
             <figcaption className="absolute bottom-4 left-5 text-sm font-medium text-white/80">
               {t(`showcase.captions.${KEYS[0]}`)}
             </figcaption>
-          </motion.figure>
+          </m.figure>
 
           <div className="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
-            <motion.figure
+            <m.figure
               style={{ y: yFront }}
               className="group relative overflow-hidden rounded-2xl border border-[var(--color-border)] aspect-[4/3]"
             >
@@ -132,9 +132,9 @@ export function Showcase() {
               <figcaption className="absolute bottom-4 left-5 text-sm font-medium text-white/80">
                 {t(`showcase.captions.${KEYS[1]}`)}
               </figcaption>
-            </motion.figure>
+            </m.figure>
 
-            <motion.figure
+            <m.figure
               style={{ y: yBack }}
               className="group relative overflow-hidden rounded-2xl border border-[var(--color-border)] aspect-[4/3]"
             >
@@ -143,7 +143,7 @@ export function Showcase() {
               <figcaption className="absolute bottom-4 left-5 text-sm font-medium text-white/80">
                 {t(`showcase.captions.${KEYS[2]}`)}
               </figcaption>
-            </motion.figure>
+            </m.figure>
           </div>
         </div>
 

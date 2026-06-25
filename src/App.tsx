@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
+import { LazyMotion, domAnimation } from 'motion/react'
 import { ScrollProgressBar } from '@/components/ScrollProgressBar'
 import { CookieConsent } from '@/components/CookieConsent'
 import { useAppStore } from '@/store/useAppStore'
@@ -65,7 +66,10 @@ function ScrollManager() {
 
 export default function App() {
   return (
-    <>
+    // `domAnimation` covers the fade/transform/AnimatePresence features used
+    // here (no layout/drag). `strict` makes any stray `motion.*` (vs `m.*`)
+    // throw, keeping the lazy feature bundle from being defeated.
+    <LazyMotion features={domAnimation} strict>
       <Helmet>
         <meta name="theme-color" content="#f7f1e6" />
       </Helmet>
@@ -79,6 +83,6 @@ export default function App() {
       <ScrollProgressBar />
       <Outlet />
       <CookieConsent />
-    </>
+    </LazyMotion>
   )
 }
